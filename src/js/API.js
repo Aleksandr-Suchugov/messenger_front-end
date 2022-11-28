@@ -26,18 +26,18 @@ export default class API {
     this.wss = new WebSocket(this.URL);
 
     this.wss.addEventListener('open', () => {
-      console.log('Соединение установлено');
+      // console.log('Соединение установлено');
       this.setConnectState(true);
       this.onLoad();
     });
 
     this.wss.addEventListener('close', () => {
-      console.log('Соединение закрыто');
+      // console.log('Соединение закрыто');
       this.setConnectState(false);
     });
 
     this.wss.addEventListener('error', () => {
-      console.log('Ошибка подключения');
+      // console.log('Ошибка подключения');
       this.setConnectState(false);
     });
 
@@ -142,7 +142,7 @@ export default class API {
     event.preventDefault();
     const inputEl = event.target.elements.send;
     const data = inputEl.value.trim();
-    console.log(data);
+    // console.log(data);
     if (data === '') {
       this.popupError.show(inputEl, 'Пустое поле');
       return;
@@ -185,11 +185,11 @@ export default class API {
     if (status) {
       statusState.className = 'status_state-online';
       this.connectBtn.setAttribute('disabled', true);
-      this.connectBtn.textContent = 'Connected'
+      this.connectBtn.textContent = 'Connected';
     } else {
       statusState.className = 'status_state-offline';
       this.connectBtn.removeAttribute('disabled');
-      this.connectBtn.textContent = 'Connect'
+      this.connectBtn.textContent = 'Connect';
     }
   }
 
@@ -228,9 +228,9 @@ export default class API {
       }
       this.emoji.renderEmojiBox();
       const emojiBox = document.querySelector('.emoji_box');
-      emojiBox.addEventListener('click', (ev) => {
-        inputField.value += ev.target.textContent;
-      }, {once: true});
+      emojiBox.addEventListener('click', (event) => {
+        inputField.value += event.target.textContent;
+      }, { once: true });
     });
   }
 

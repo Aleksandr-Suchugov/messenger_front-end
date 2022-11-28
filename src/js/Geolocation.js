@@ -1,4 +1,5 @@
 /* eslint-disable class-methods-use-this */
+/* eslint-disable consistent-return */
 import PopUpError from './PopUpError';
 
 export default class Geolocation {

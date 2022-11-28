@@ -9,5 +9,5 @@ export default class App {
 
   init() {
     this.api.init();
-  } 
+  }
 }

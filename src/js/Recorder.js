@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import PopUpError from './PopUpError';
 
 export default class Recorder {

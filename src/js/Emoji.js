@@ -1,4 +1,4 @@
-export default class Emoji{
+export default class Emoji {
   constructor() {
     this.emojiBtn = document.querySelector('.emoji');
     this.emojis = [
